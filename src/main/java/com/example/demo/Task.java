@@ -1,24 +1,24 @@
 package com.example.demo;
 
-import javafx.beans.property.SimpleStringProperty;
-
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Task {
     private  final String title;
     private final String description;
-    private final String creation;
-    private final String dead;
-    private final String status;
+    private final LocalDate creation;
+    private final LocalDate dead;
+    private final Boolean status;
 
 
-    public Task(String title, String description, String creation, String dead, String status) {
+    public Task(String title, String description, LocalDate creation, LocalDate dead, boolean status) {
         this.title = title;
         this.description = description;
         this.creation = creation;
         this.dead = dead;
         this.status = status;
     }
+
 
     public String title(){
         return title;
@@ -27,15 +27,15 @@ public class Task {
         return description;
     }
 
-    public String creation() {
+    public LocalDate getCreation() {
         return creation;
     }
 
-    public String dead() {
+    public LocalDate dead() {
         return dead;
     }
 
-    public String status() {
+    public boolean status() {
         return status;
     }
 }

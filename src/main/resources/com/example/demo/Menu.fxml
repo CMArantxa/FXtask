@@ -13,57 +13,58 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="335.0" prefWidth="348.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.UserController">
-   <children>
-      <VBox prefHeight="335.0" prefWidth="348.0">
-         <children>
-            <MenuBar prefHeight="29.0" prefWidth="184.0">
-              <menus>
-                <Menu fx:id="file" mnemonicParsing="false" text="File">
-                  <items>
-                    <MenuItem fx:id="mnCerrar" mnemonicParsing="false" onAction="#close" text="Close" />
-                  </items>
-                </Menu>
-              </menus>
-            </MenuBar>
-            <TabPane prefHeight="346.0" prefWidth="348.0" tabClosingPolicy="UNAVAILABLE">
-              <tabs>
-                <Tab text="Nueva tarea">
-                  <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                           <children>
-                              <Button fx:id="button" layoutX="130.0" layoutY="59.0" mnemonicParsing="false" onAction="#risas" text="Button" />
-                              <TextField fx:id="carapuchiña" layoutX="83.0" layoutY="21.0" text="Carapuchiña" />
-                              <DatePicker fx:id="fecha" layoutX="107.0" layoutY="107.0" onAction="#risas" />
-                           </children></AnchorPane>
-                  </content>
-                </Tab>
-                <Tab text="Ver tareas">
-                  <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="255.0" prefWidth="285.0">
-                           <children>
-                              <TableView fx:id="tbltask" layoutX="6.0" layoutY="4.0" prefHeight="155.0" prefWidth="209.0">
-                                <columns>
-                                  <TableColumn fx:id="title" prefWidth="75.0" text="Title" />
-                                  <TableColumn fx:id="description" prefWidth="75.0" text="Description" />
-                                    <TableColumn fx:id="creation" prefWidth="75.0" text="Fecha Creacion" />
-                                    <TableColumn fx:id="dead" prefWidth="49.0" text="dead" />
-                                    <TableColumn fx:id="status" prefWidth="73.0" text="Status" />
-                                </columns>
-                              </TableView>
-                              <Button fx:id="btndatos" layoutX="42.0" layoutY="185.0" mnemonicParsing="false" onAction="#btntraerDatos" text="Datos" />
-                              <TextField fx:id="txttitle" layoutX="255.0" layoutY="4.0" prefHeight="26.0" prefWidth="88.0" promptText="title" />
-                              <TextField fx:id="txtdescrip" layoutX="252.0" layoutY="30.0" prefHeight="26.0" prefWidth="82.0" promptText="decription" />
-                              <TextField fx:id="txtcreation" layoutX="254.0" layoutY="56.0" prefHeight="26.0" prefWidth="90.0" promptText="creation" />
-                              <TextField fx:id="txtdead" layoutX="255.0" layoutY="82.0" prefHeight="26.0" prefWidth="89.0" promptText="dead" />
-                              <TextField fx:id="txtstatus" layoutX="252.0" layoutY="108.0" prefHeight="26.0" prefWidth="95.0" promptText="status" />
-                              <Button fx:id="btnadd" layoutX="260.0" layoutY="170.0" mnemonicParsing="false" onAction="#addDatos" text="Add new" />
-                           </children></AnchorPane>
-                  </content>
-                </Tab>
-              </tabs>
-            </TabPane>
-         </children>
-      </VBox>
-   </children>
+<AnchorPane prefHeight="463.0" prefWidth="578.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.UserController">
+    <children>
+        <VBox layoutX="7.0" layoutY="7.0" prefHeight="452.0" prefWidth="564.0">
+            <children>
+                <MenuBar prefHeight="22.0" prefWidth="384.0">
+                    <menus>
+                        <Menu fx:id="file" mnemonicParsing="false" text="File">
+                            <items>
+                                <MenuItem fx:id="mnCerrar" mnemonicParsing="false" onAction="#close" text="Close" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+                <TabPane prefHeight="346.0" prefWidth="348.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                        <Tab text="Nueva tarea">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <Button fx:id="button" layoutX="130.0" layoutY="59.0" mnemonicParsing="false" onAction="#risas" text="Button" />
+                                        <TextField fx:id="carapuchiña" layoutX="83.0" layoutY="21.0" text="Carapuchiña" />
+                                        <DatePicker fx:id="fecha" layoutX="107.0" layoutY="107.0" onAction="#risas" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab text="Ver tareas">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="255.0" prefWidth="285.0">
+                                    <children>
+                                        <TableView fx:id="tbltask" layoutX="6.0" layoutY="4.0" prefHeight="265.0" prefWidth="372.0">
+                                            <columns>
+                                                <TableColumn fx:id="title" prefWidth="57.0" text="Title" />
+                                                <TableColumn fx:id="description" prefWidth="93.0" text="Description" />
+                                                <TableColumn fx:id="creation" prefWidth="88.0" text="Fecha Creacion" />
+                                                <TableColumn fx:id="dead" prefWidth="73.0" text="dead" />
+                                                <TableColumn fx:id="status" prefWidth="60.0" text="Status" />
+                                            </columns>
+                                        </TableView>
+                                        <TextField fx:id="txttitle" layoutX="440.0" layoutY="14.0" prefHeight="26.0" prefWidth="88.0" promptText="title" />
+                                        <TextField fx:id="txtdescrip" layoutX="440.0" layoutY="56.0" prefHeight="26.0" prefWidth="82.0" promptText="decription" />
+                                        <TextField fx:id="txtstatus" layoutX="452.0" layoutY="185.0" prefHeight="26.0" prefWidth="95.0" promptText="status" />
+                                        <Button fx:id="btnadd" layoutX="451.0" layoutY="231.0" mnemonicParsing="false" onAction="#addDatos" text="Add new" />
+                                        <DatePicker fx:id="dateCreation" layoutX="440.0" layoutY="107.0" prefHeight="26.0" prefWidth="116.0" />
+                                        <DatePicker fx:id="dateDead" layoutX="442.0" layoutY="146.0" prefHeight="26.0" prefWidth="115.0" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+            </children>
+        </VBox>
+    </children>
 </AnchorPane>
